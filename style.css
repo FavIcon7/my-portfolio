@@ -1,0 +1,436 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    height: 180px;
+    width: 100%;
+    background-image: linear-gradient(rgba(3, 27, 120, 0.7), rgba(4,9,30,0.7)), url(/image/pexels-andrea-piacquadio-839586.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img { 
+    width: 200px;
+    height: 100px;
+    margin-left: -35px ;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.4s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+nav i{ display: none;}
+@media(max-width:700px){
+    .header{
+        width: 100%;
+        height: 150px;
+    }
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links {
+        position: absolute;
+        background:#f44336 ;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index:2;
+        transition: 0.6s;
+        /* display: none; */
+    }
+    nav i {
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul {
+        padding: 30px;
+      
+    }
+    }
+
+    /* ----- ABOUT SECTION ----*/
+    .introduction{
+        margin: 0px;
+        height: 100%;
+        border: 2px solid black;
+        background-image:radial-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(image/pexels-junior-teixeira-2047905.jpg);
+         background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        padding: 0px;
+     }
+     .introduction .intro {
+        margin-top: 50px;
+        text-align: right;
+        width: 50%;
+        margin-right: 45%;
+        font-size: 35px;
+       
+    }
+    .me{
+        position:relative;
+        top: 90px;
+        font-weight: bolder;
+        color: #fff;
+    
+    }
+    .introduction span {
+        margin-right: 50%;
+        margin-top: 50px;
+        font-style: oblique;
+        font-size: 70px;
+    }
+    .introduction .intro h2 {
+        margin-right: 65px;
+        font-weight: lighter;
+        font-family:Georgia, 'Times New Roman', Times, serif ;
+        font-size: 120px;
+        color: #01B0D3;
+    }
+   
+      .introduction .intro p {
+          text-align: center;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          color:#fff;
+      }
+      .introduction a{
+           text-decoration: none;
+   
+      }
+      .introduction .intro button:hover { background-color:#01B0D3;
+   
+      }
+      .introduction .intro button  {
+          margin-bottom: 34px;
+       padding: 14px;
+       border-radius: 44px;
+       color: green;
+       cursor: pointer;
+       border: none;
+       transition: .4s;
+      }
+      @media(max-width:700px){
+        .introduction .intro {
+            margin-top: 50px;
+            text-align: right;
+            width: 50%;
+            margin-right: 45%;
+            font-size: 20px;
+           
+        }
+        .introduction .intro h2 {
+            margin-right: 65px;
+            font-weight: lighter;
+            font-family:Georgia, 'Times New Roman', Times, serif ;
+            font-size: 90px;
+            color: #01B0D3;
+        }
+
+      }
+
+
+      .about {
+        width: 100%;
+        padding: 100px 0px;
+        background-color: #242424;
+    }
+    .about img {
+        width: 430px;
+        height: auto;
+        border-top-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+    }
+    .aboutText {
+        width: 500px;
+    }
+    .main {
+        width: 1130px;
+        max-width: 95%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    
+.aboutText h2 {
+    color: #fff;
+    font-size: 75px;
+    text-transform: capitalize;
+    margin-bottom: 22px;
+}
+.aboutText h4 {
+    color: #fff;
+    letter-spacing: 2px;
+    font-size: 22px;
+    text-transform: capitalize;
+    margin-bottom: 22px;
+}
+.aboutText h4 span {
+    color: #01B0D3;
+}
+.aboutText p {
+    color: #7ddaec;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 25px;
+    margin-bottom: 45px;}
+
+@media(max-width:700px){
+    .main {
+        width: 100%;
+        /* max-width: 95%; */
+        margin: 0 auto;
+        /* display: block; */
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .about {
+        width: 100%;
+        padding: 100px 0px;
+        background-color: #242424;
+    }
+    .about img {
+        width: 300px;
+        height: auto;
+        border-top-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+    }
+    .aboutText {
+        width: 300px;
+    }
+    .aboutText h2 {
+        color: #fff;
+        text-align: center;
+        font-size: 50px;
+        text-transform: capitalize;
+        margin-bottom: 22px;
+    }
+}
+
+
+
+    
+     /* ---- service section */
+     .services {
+        width: 100%;
+        padding: 100px 0px;
+        background-color: rgb(255, 255, 255);
+    }
+    .title h2{
+        color: #01B0D3;
+        font-size: 75px;
+        width: 1130px;
+        margin: 30px auto;
+        text-align: center;
+        text-transform: capitalize;
+    }
+        .box{
+            display: inline-block;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            min-height: 400px;
+        }
+        .card{
+            height: 356px;
+            width: 335px;
+            padding: 20px 35px;
+            background-color: #242424;
+            border-radius: 20px;
+            margin: 15px;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+    
+        }
+        .card i {
+            font-size: 50px;
+            display: block;
+            text-align: center;
+            margin: 25px 0px;
+            color: #01B0D3;
+        }
+        .card h3 {
+            color: white;
+            font-size: 23px;
+            margin-bottom: 15px;
+        }
+        .card p {
+            color: #7ddaec;
+            font-size: 16px;
+            margin-bottom: 25px;
+        }
+        .card button {
+            text-decoration: none;
+            border: 2px solid transparent;
+            font-weight: bold;
+            padding: 9px 30px;
+            border-radius: 30px;
+            transition: .4s;
+        }
+        .card button:hover{
+            background-color: #01B0D3;
+            cursor: pointer;
+        }
+    
+        .footerContainer{
+            width: 100%;
+            padding: 22px 0px;
+            display: flex;
+            background-color: black;
+            color: blanchedalmond;
+            text-align:center ;
+            height: 200px;
+            justify-content: center;
+    
+        }
+        .footerHeading {
+            padding: 5px;
+            text-align: center;
+            margin: 22px;
+            margin-bottom: 400px;
+            justify-content: center;
+        }
+        .footerHeading a{
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            padding: 5px 0px;
+            color: #01B0D3;
+            
+        }
+        .footerEmail{
+            justify-content: center;
+            padding: 30px 0px;
+            outline: none;
+    
+        }.footerEmail h2{
+            text-align: center;
+        }
+    
+        .footerEmail .email{
+            width: 200px;
+            height: 30px;
+            justify-content: center;
+        }
+        .footerEmail .btn{
+            background-color:#01B0D3;
+            height: 35px;
+            font-weight: bold;
+            outline: none;
+            border: none;
+        }
+        @media(max-width:700px){
+            .services {
+                width: 100%;
+                /* padding: 100px 0px; */
+            }    
+            .title h2{
+                color: #01B0D3;
+                font-size: 55px;
+                width: 90%;
+                flex: 1;
+                /* margin: 30px auto; */
+                text-align: center;
+                text-transform: capitalize;
+            }    
+            .box{
+                display: inline-block;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                min-height: 400px;
+            }
+            .card{
+                height: 356px;
+                width: 70%;
+                padding: 20px 35px;
+                background-color: #242424;
+                border-radius: 20px;
+                margin: 15px;
+                position: relative;
+                overflow: hidden;
+                text-align: center;
+        
+            }
+            
+        .footerContainer{
+            width: 100%;
+            align-self: center;
+            border-radius: 30px;
+            padding: 22px 0px;
+            display: flex;
+            text-align:right ;
+            height: 200px;
+            justify-content: center;
+    
+        }
+        .footerHeading {
+            padding: 5px;
+            text-align: left;
+            margin: 22px;
+            margin-bottom: 400px;
+            justify-content: center;
+        }
+    
+    .footerHeading a{
+        display: block;
+        text-align: left;
+        text-decoration: none;
+        padding: 5px 0px;
+        color: #01B0D3;
+        
+    }
+    .footerEmail{
+        width: 1%;
+        display: none;
+    }
+    .footerEmail .email{
+        width: 1%;
+        display: none;
+        height: 30px;
+        justify-content: center;
+    }
+        }
+    
+    
